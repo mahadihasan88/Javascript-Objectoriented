@@ -28,3 +28,13 @@ tech_arr.forEach(function(args){
     args.print();
 })
 
+
+
+function Book (name,author,price){
+    this.name=name;
+    this.author=author;
+    this.price=price;
+}
+
+var book= new Book('Rahe Belayat','Dr.Abdullah Jahangir',250);
+console.log(book.constructor);
