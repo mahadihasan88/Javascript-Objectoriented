@@ -1,23 +1,30 @@
-function  person(name,email,id){
+function teacher(name,dept,id){
+
     this.name=name;
-    this.email=email;
+    this.dept=dept;
     this.id=id;
     this.print=function(){
-        console.log(this.name+'('+this.id+')');
+        console.log('Name : '+this.name+' Dept : '+this.dept+'('+this.id+')');
     }
-    
-    
 }
 
+var tec1= new teacher('Shajalal ','CSE',2000001);
+var tec2=new teacher('Abu Bokor','ECE',21000000);
+var tec3=new teacher('Fazle Rabbi','CSE',2000045)
+//tec1.print();
+//tec2.print();
+tec3.desti='Chairman';
+//tec3.print();
+//console.log(tec3);
+// for(var data in tec3){
+//     console.log(data +' : '+tec3[data]);
+// }
 
-var obj1=new person('Mahadi Hasan','mahadi@gmail.com',1802006);
-// console.log(obj1);
+var tech_arr=[tec1,tec2,tec3];
 
-var obj2= new person('Arefin Kabir','arefin@gmail.com',1502009);
+tech_arr.forEach(function(args){
+    var idnum=args.id
+    //console.log(args.dept);
+    args.print();
+})
 
-obj2.campus='Hstu';
-var obj3=new person('Jabe Arefin','arefin@gmail.com',1302045);
-
-for(var data in obj2){
-    console.log(obj2[data]);
-}

@@ -1,32 +1,30 @@
+function teacher(name,dept,id){
 
-function Person(name,email,id){
-    //console.log('This is constructed');
     this.name=name;
-    this.email=email;
+    this.dept=dept;
     this.id=id;
     this.print=function(){
-        console.log('Name : '+this.name);
+        console.log('Name : '+this.name+' Dept : '+this.dept+'('+this.id+')');
     }
-   // console.log(this.name,this.email);
 }
-var p1= new Person('Mahadi Hasan','Mahadi@gmail.com');
-// console.log(p1.name);
-// console.log(p1.email);
-// console.log(p1.id);
-// console.log(p1);
 
-var p2=new Person('Karim Haidar','karimhaidar@gmail.com',1802006);
-// console.log(p2.name);
-// console.log(p2.email);
-// console.log(p2.id);
-var p3=new Person('Arpon Haidar','arpon@gmail.com',32432424323)
-var people=[p1,p2,p3];
-//console.log(people);
-// people.forEach(function(data){
-//     //console.log('Email = '+data.print());
-//     data.print();
-// })
-for(var item in p1)
-{
-    console.log(item);
-}
+var tec1= new teacher('Shajalal ','CSE',2000001);
+var tec2=new teacher('Abu Bokor','ECE',21000000);
+var tec3=new teacher('Fazle Rabbi','CSE',2000045)
+//tec1.print();
+//tec2.print();
+tec3.desti='Chairman';
+//tec3.print();
+//console.log(tec3);
+// for(var data in tec3){
+//     console.log(data +' : '+tec3[data]);
+// }
+
+var tech_arr=[tec1,tec2,tec3];
+
+tech_arr.forEach(function(args){
+    var idnum=args.id
+    //console.log(args.dept);
+    args.print();
+})
+
