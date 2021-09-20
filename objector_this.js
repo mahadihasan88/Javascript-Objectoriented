@@ -26,11 +26,16 @@ obj.print();*/
 //         console.log('Hellow '+this.name );
 //     }
 // }
-// // var myname=person.name;
-// // console.log(myname);
-// var myfun=person.print.bind(person);
-// //console.log(myfun);
-// myfun();
+//var myname=person.name;
+
+//console.log(myname);
+// var temfun=person.print;
+//      temfun();
+//var myfun=person.print.bind(person);
+//console.log(myfun);
+ //myfun()
+//person.print();
+
 // function add(num){
 //    var result= this.value+num;
 //    console.log(result);
@@ -46,7 +51,7 @@ obj.print();*/
 
 var person={
     name:'Hellow Bangladesb',
-    print:function(){
+    print:function(){   
         setTimeout(function(){
             console.log('Function called '+this.name); 
         }.bind(this),5000)
